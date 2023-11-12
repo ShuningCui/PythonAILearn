@@ -1,6 +1,6 @@
 input = input().split()
-str1 = input[0].supper()
-str2 = input[1].supper()
+str1 = input[0].upper()
+str2 = input[1].upper()
 str3 = []
 for s in str1:
     if s not in str3:
