@@ -1,3 +1,9 @@
+# P048-月份天数计算
+# 输入公元年份和月份，输出该月份的天数。
+# 输入：年，月（逗号分隔）
+# 输出：天数
+
+
 def is_laepyear(year):
     return year % 4 == 0 and year % 100 != 0 or year % 400 == 0
 def get_days(year, month):
