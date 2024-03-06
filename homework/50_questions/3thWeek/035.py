@@ -16,5 +16,5 @@ def encoder(x,n):
 
 input_string = input().split()
 string = input_string[0]
-n = int(input_string[1])
+n = int(input_string[1])%26
 print(''.join([encoder(x,n) for x in string if x.isalpha()]))
