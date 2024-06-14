@@ -4,7 +4,10 @@
 
 
 string = input()
-str1 = [string[i] for i in range(1,len(string)-1)]
+if len(string) == 1:
+    print(string)
+    exit()
+str1 = list(string[1:-1])
 str1.sort(reverse=True)
 print(string[0]+''.join(str1)+string[-1])
 
