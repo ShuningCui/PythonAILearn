@@ -9,12 +9,9 @@
 
 
 def encoder(x,n):
-    if x.isupper():
-        return chr((ord(x)-65+n)%26+65)
-    elif x.islower():
-        return chr((ord(x)-97+n)%26+97)
+    base = 65 if x.isupper() else 97
+    return chr(base+(ord(x)-base+n)%26)
 
-input_string = input().split()
-string = input_string[0]
-n = int(input_string[1])%26
-print(''.join([encoder(x,n) for x in string if x.isalpha()]))
+string, str_n = input().split()
+n = int(str_n)%26
+print(''.join([encoder(x,n) if x.isalpha() else x for x in string ]))
