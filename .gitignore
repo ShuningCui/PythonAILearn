@@ -10,6 +10,9 @@ chapter8/output2/
 
 # C extensions
 *.so
+# test
+test.py
+test.ipynb
 
 # Distribution / packaging
 .Python
