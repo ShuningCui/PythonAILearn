@@ -1,14 +1,16 @@
-from sklearn.datasets import fetch_california_housing
-from sklearn.model_selection import train_test_split
-X, y = fetch_california_housing(return_X_y=True,data_home = "./")
-x_train,x_val,y_train,y_val = train_test_split(X,y,train_size=0.8)
-
+# pip install -U scikit-learn
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 from torch.utils.data import TensorDataset, DataLoader
+from sklearn.datasets import fetch_california_housing
+from sklearn.model_selection import train_test_split
+
+X, y = fetch_california_housing(return_X_y=True,data_home = "./")
+x_train,x_val,y_train,y_val = train_test_split(X,y,train_size=0.8)
+
 
 x_train_tensor = torch.as_tensor(x_train,dtype=torch.float32)
 y_train_tensor = torch.as_tensor(y_train,dtype=torch.float32).view(-1,1)
